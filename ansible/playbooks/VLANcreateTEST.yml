@@ -1,0 +1,27 @@
+---
+- hosts: all
+  connection: local
+  tasks:
+  - name: Create vlan
+    ios_vlan:
+      vlan_id: 669
+      name: ADD669
+      state: present
+
+  - name: Add interfaces to VLAN
+    ios_vlan:
+      vlan_id: 669
+      interfaces:
+        - Gi1/0/3
+        - Gi1/0/4
+
+  - name: Check if interfaces is assigned to VLAN
+    ios_vlan:
+      vlan_id: 669
+      associated_interfaces:
+        - GigabitEthernet1/0/3
+        - GigabitEthernet1/0/4
+
+
+
+

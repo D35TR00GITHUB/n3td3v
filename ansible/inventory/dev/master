@@ -1,0 +1,3 @@
+[dev]
+devserver01.6TH-FLOOR-ROUTERS ansible_ssh_host=100.64.2.123
+#100.64.2.123

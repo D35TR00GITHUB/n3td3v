@@ -1,0 +1,7 @@
+---
+- hosts: all
+  tasks:
+  - name: Run Command for Ali Baba
+    raw: conf t
+    raw: hostname ALIBABA
+
